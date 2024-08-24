@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: ndnk0311/do_an_new
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Trang chủ"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "Tiêu đề", name: "title", widget: "string" }
+          - { label: "Giới Thiệu", name: "about", widget: "text" }
+          - { label: "Địa Điểm Tham Quan", name: "attractions", widget: "list", fields: [
+              { label: "Tên Địa Điểm", name: "name", widget: "string" },
+              { label: "Mô Tả", name: "description", widget: "text" },
+              { label: "Hình Ảnh", name: "image", widget: "image" }
+            ]
+          }
+          - { label: "Thư Viện Ảnh", name: "gallery", widget: "list", fields: [
+              { label: "Hình Ảnh", name: "image", widget: "image" }
+            ]
+          }
+          - { label: "Liên Hệ", name: "contact", widget: "text" }
+
+  - name: "images"
+    label: "Images"
+    folder: "images"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Hình Ảnh", name: "image", widget: "image" }
+      - { label: "Mô Tả", name: "description", widget: "string" }
+
+  - name: "styles"
+    label: "Styles"
+    files:
+      - label: "Main Stylesheet"
+        name: "styles"
+        file: "static/styles.css"
+        fields:
+          - { label: "CSS Content", name: "content", widget: "code", code_mode: "css" }
