@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "/admin/:any*",
+        "destination": "/admin/index.html",
+        "statusCode": 200
+      }
+    ]
+  }
+  
