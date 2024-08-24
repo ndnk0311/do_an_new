@@ -2,6 +2,8 @@ backend:
   name: github
   repo: ndnk0311/do_an_new
   branch: main
+  auth_endpoint: https://api.netlify.com
+  app_id: Ov23liW0G5UO1hUsg4KG
 
 media_folder: "images"
 public_folder: "/images"
